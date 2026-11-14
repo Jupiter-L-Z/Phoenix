@@ -1,5 +1,18 @@
 # Phoenix 完整迁移备份
 
+## 2026-11-14 豆浆人格增量更新
+
+`updates/` 中保存最新人格的 AES-256-GCM 加密补丁，沿用原 Phoenix 恢复密钥。更新包含自然拌嘴、情绪表达、回复长短和关心边界的调整。密钥和人格明文均不上传。
+
+先按下文恢复完整备份，再在复制到新电脑前执行：
+
+```powershell
+python updates/restore_persona.py --key-file PHOENIX-RECOVERY-KEY.txt --dsh-home E:\Phoenix-restored\restored\dsh-home
+```
+
+也可将 `--dsh-home` 指向实际 `.dsh` 目录。恢复前会保留原人格副本；若同名备份已存在会停止，避免覆盖。此补丁只更新人格，不更新聊天历史或插件代码。
+
+
 本仓库是公开仓库，所有私人数据均采用 AES-256-GCM 加密，保存在 Release 附件。**必须另外保管 PHOENIX-RECOVERY-KEY.txt，密钥不会上传到 GitHub；丢失后无法恢复。**
 
 备份范围：整个 E:\qqbot 工作区、整个用户 .dsh（含已安装插件及依赖、插件数据、记忆、人格、图片、附件、会话消息历史、账号配置）、整个 DeepSeek Harness 安装目录、桌面 Electron 用户数据。包含隐藏文件和子目录。不是整个操作系统或 QQ 客户端安装目录的镜像。

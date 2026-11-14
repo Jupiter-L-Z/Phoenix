@@ -1,0 +1,8 @@
+{
+  "format": "AES-256-GCM",
+  "aad": "doujiang-persona-20261114",
+  "file": "doujiang-persona-20261114.bin",
+  "sha256": "55dd33659fa1e6264c70a1adc0eebb9f11a6066acce1c4ea726b273c2a6c95f7",
+  "plaintext_sha256": "3dba6dc5d99277e3aa0f0625def3b0d0cfb6babe2f483585dddd0857a5a5877d",
+  "target": "dsh-home/plugins-data/aurabot/personas/dafeiyu.md"
+}
